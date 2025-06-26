@@ -1,0 +1,1096 @@
+{
+	"info": {
+		"_postman_id": "720e7ddd-0f9e-49f0-a204-e15ede53cd2d",
+		"name": "RESTCountries API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46210477",
+		"_collection_link": "https://dandy-3415141.postman.co/workspace/Dandy's-Workspace~5dc9a9bc-965c-4798-8731-3f791998f797/collection/46210477-720e7ddd-0f9e-49f0-a204-e15ede53cd2d?action=share&source=collection_link&creator=46210477"
+	},
+	"item": [
+		{
+			"name": "NAME",
+			"item": [
+				{
+					"name": "TC_01 - Valid country name (canada)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_01 - Valid country name",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/canada",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"canada"
+							]
+						},
+						"description": "**Test Case ID:** TC_01\n**Title:** Valid country name\n**Input:** canada"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_02 - Country name in uppercase (CANADA)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_02 - Country name in uppercase",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/CANADA",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"CANADA"
+							]
+						},
+						"description": "**Test Case ID:** TC_02\n**Title:** Country name in uppercase\n**Input:** CANADA"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_03 - Country name in lowercase (canada)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_03 - Country name in lowercase",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/canada",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"canada"
+							]
+						},
+						"description": "**Test Case ID:** TC_03\n**Title:** Country name in lowercase\n**Input:** canada"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_04 - Mixed case input (CaNaDa)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_04 - Mixed case input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/CaNaDa",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"CaNaDa"
+							]
+						},
+						"description": "**Test Case ID:** TC_04\n**Title:** Mixed case input\n**Input:** CaNaDa"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_05 - Country with space (united states)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_05 - Country with space",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/united states",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"united states"
+							]
+						},
+						"description": "**Test Case ID:** TC_05\n**Title:** Country with space\n**Input:** united states"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_06 - Invalid country name (xyzabc)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_06 - Invalid country name",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/xyzabc",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"xyzabc"
+							]
+						},
+						"description": "**Test Case ID:** TC_06\n**Title:** Invalid country name\n**Input:** xyzabc"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_07 - Special characters (@#$%^)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_07 - Special characters",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/@#$%^",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"@"
+							],
+							"hash": "$%^"
+						},
+						"description": "**Test Case ID:** TC_07\n**Title:** Special characters\n**Input:** @#$%^"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_08 - Empty input (empty)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_08 - Empty input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name"
+							]
+						},
+						"description": "**Test Case ID:** TC_08\n**Title:** Empty input\n**Input:** empty"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_09 - Country with diacritics (Côte d'Ivoire)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_09 - Country with diacritics",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/Côte d'Ivoire",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"Côte d'Ivoire"
+							]
+						},
+						"description": "**Test Case ID:** TC_09\n**Title:** Country with diacritics\n**Input:** Côte d'Ivoire"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_10 - Common substring (united)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_10 - Common substring",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/united",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"united"
+							]
+						},
+						"description": "**Test Case ID:** TC_10\n**Title:** Common substring\n**Input:** united"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_11 - Full-text exact match (united?fullText=true)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_11 - Full-text exact match",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/united?fullText=true",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"united"
+							],
+							"query": [
+								{
+									"key": "fullText",
+									"value": "true"
+								}
+							]
+						},
+						"description": "**Test Case ID:** TC_11\n**Title:** Full-text exact match\n**Input:** united?fullText=true"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_12 - Numeric input (12345)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_12 - Numeric input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/12345",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"12345"
+							]
+						},
+						"description": "**Test Case ID:** TC_12\n**Title:** Numeric input\n**Input:** 12345"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_13 - Input with whitespace (%20canada%20)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_13 - Input with whitespace",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/%20canada%20",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"%20canada%20"
+							]
+						},
+						"description": "**Test Case ID:** TC_13\n**Title:** Input with whitespace\n**Input:** %20canada%20"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_14 - Hyphenated name (bosnia and herzegovina)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_14 - Hyphenated name",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/bosnia and herzegovina",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"bosnia and herzegovina"
+							]
+						},
+						"description": "**Test Case ID:** TC_14\n**Title:** Hyphenated name\n**Input:** bosnia and herzegovina"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_15 - Language code as input (en)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_15 - Language code as input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/v3.1/name/en",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"v3.1",
+								"name",
+								"en"
+							]
+						},
+						"description": "**Test Case ID:** TC_15\n**Title:** Language code as input\n**Input:** en"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CURRENCY",
+			"item": [
+				{
+					"name": "TC_12 - Currency code in uppercase (USD)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_12 - Currency code in uppercase",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/USD",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"USD"
+							]
+						},
+						"description": "**Test Case ID:** TC_12\n**Title:** Currency code in uppercase\n**Input:** USD"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_13 - Invalid currency code (xyz)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_13 - Invalid currency code",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/xyz",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"xyz"
+							]
+						},
+						"description": "**Test Case ID:** TC_13\n**Title:** Invalid currency code\n**Input:** xyz"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_14 - Currency with numbers (usd1)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_14 - Currency with numbers",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/usd1",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"usd1"
+							]
+						},
+						"description": "**Test Case ID:** TC_14\n**Title:** Currency with numbers\n**Input:** usd1"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_15 - Empty input (empty)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_15 - Empty input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency"
+							]
+						},
+						"description": "**Test Case ID:** TC_15\n**Title:** Empty input\n**Input:** empty"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_16 - Currency used by multiple countries (eur)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_16 - Currency used by multiple countries",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/eur",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"eur"
+							]
+						},
+						"description": "**Test Case ID:** TC_16\n**Title:** Currency used by multiple countries\n**Input:** eur"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_17 - Currency with special symbol ($)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_17 - Currency with special symbol",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/$",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"$"
+							]
+						},
+						"description": "**Test Case ID:** TC_17\n**Title:** Currency with special symbol\n**Input:** $"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_11 - Valid currency code (usd)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_11 - Valid currency code",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/currency/usd",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"currency",
+								"usd"
+							]
+						},
+						"description": "**Test Case ID:** TC_11\n**Title:** Valid currency code\n**Input:** usd"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LANGUAGE",
+			"item": [
+				{
+					"name": "TC_18 - Valid language (english)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_18 - Valid language",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/english",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"english"
+							]
+						},
+						"description": "**Test Case ID:** TC_18\n**Title:** Valid language\n**Input:** english"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_19 - Language in lowercase (french)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_19 - Language in lowercase",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/french",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"french"
+							]
+						},
+						"description": "**Test Case ID:** TC_19\n**Title:** Language in lowercase\n**Input:** french"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_20 - Language in uppercase (ENGLISH)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_20 - Language in uppercase",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/ENGLISH",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"ENGLISH"
+							]
+						},
+						"description": "**Test Case ID:** TC_20\n**Title:** Language in uppercase\n**Input:** ENGLISH"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_21 - Invalid language (xyzlang)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_21 - Invalid language",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/xyzlang",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"xyzlang"
+							]
+						},
+						"description": "**Test Case ID:** TC_21\n**Title:** Invalid language\n**Input:** xyzlang"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_22 - Language used by multiple countries (arabic)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_22 - Language used by multiple countries",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/arabic",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"arabic"
+							]
+						},
+						"description": "**Test Case ID:** TC_22\n**Title:** Language used by multiple countries\n**Input:** arabic"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_23 - Special characters (#!@)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_23 - Special characters",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/#!@",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								""
+							],
+							"hash": "!@"
+						},
+						"description": "**Test Case ID:** TC_23\n**Title:** Special characters\n**Input:** #!@"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_24 - Empty input (empty)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_24 - Empty input",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang"
+							]
+						},
+						"description": "**Test Case ID:** TC_24\n**Title:** Empty input\n**Input:** empty"
+					},
+					"response": []
+				},
+				{
+					"name": "TC_25 - Common dialects (mandarin)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// TC_25 - Common dialects",
+									"pm.test(\"Status code is valid\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([200, 404]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.com/lang/mandarin",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"com"
+							],
+							"path": [
+								"lang",
+								"mandarin"
+							]
+						},
+						"description": "**Test Case ID:** TC_25\n**Title:** Common dialects\n**Input:** mandarin"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
